@@ -1,5 +1,5 @@
 var input = $("#new-item-input")
-var commentDisplay = $("comment-display")
+var commentDisplay = $("#list-display")
 
 input.keydown(function(e) {	
   if (e.keyCode == "13") {
