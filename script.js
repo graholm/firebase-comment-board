@@ -1,20 +1,9 @@
 var input = $("#new-item-input")
 var commentDisplay = $("comment-display")
 
-commentInput.keydown(function(e) {
-  if (e.which == 13) {
-    addListItem("comments", commentInput.val());
-  }
-})
-
-onNewListItem("whats-my-name-again", function(newComment) {
-  commentDisplay.append("<span>" + newComment + "</span>")
-})
-
-
-
 input.keydown(function(e) {	
   if (e.keyCode == "13") {
+    console.log ("hi")
     var valueToSave = input.val();
     addListItem("graceList", valueToSave);
   }
@@ -22,6 +11,6 @@ input.keydown(function(e) {
 
 
 onNewListItem("graceList", function(value) {
-  $("#list-display").append("<div>" + value +"</div>")
+  $("#comment-display").append("<div>" + value +"</div>")
 
 }) 
