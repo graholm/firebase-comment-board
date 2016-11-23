@@ -4,10 +4,9 @@ var firebaseConfig = {
   databaseURL: "https://classadoo-dev.firebaseio.com"	
 };
 
-
 firebase.initializeApp(firebaseConfig);
 
-var store = firebase.database().ref("comment-challenge-2")
+var store = firebase.database().ref("comment-challenge")
 
 function storeValue(name, value) {	
   var obj = {}
@@ -19,7 +18,7 @@ function addListItem(name, value) {
   store.child("vars" + "/" + name).push(value)
 }
 
-function onNewListItem(name, callback, maxListItems) {		
+function onNewListItem(name, callback) {		
   store.child("vars" + "/" + name).on("child_added", function(data) {
     callback(data.val())
   })
