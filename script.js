@@ -3,9 +3,9 @@ var commentDisplay = $("comment-display")
 
 input.keydown(function(e) {	
   if (e.keyCode == "13") {
-    console.log ("hi")
     var valueToSave = input.val();
     addListItem("graceList", valueToSave);
+    console.log (valueToSave)
   }
 })
 
