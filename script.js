@@ -5,12 +5,12 @@ input.keydown(function(e) {
   if (e.keyCode == "13") {
     var valueToSave = input.val();
     addListItem("graceList", valueToSave);
-    console.log (valueToSave)
+    commentDisplay
   }
 })
 
 
 onNewListItem("graceList", function(value) {
-  $("#comment-display").append("<div>" + value +"</div>")
+  commentDisplay.append("<div>" + value +"</div>")
 
 }) 
